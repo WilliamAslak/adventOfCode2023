@@ -1,4 +1,9 @@
+package aoc.day1;
+
+import aoc.Data;
+
 import java.util.ArrayList;
+
 
 public class day1 {
     public static void main(String[] args) {
@@ -6,7 +11,7 @@ public class day1 {
         System.out.println(part2());
     }
     static int part1(){
-        ArrayList<String> data = new Data().getData();
+        ArrayList<String> data = new Data().getData("day1");
         int total = 0;
         for(String s : data) {
             String stripped = s.replaceAll("[^0-9]", "");
@@ -16,7 +21,7 @@ public class day1 {
     }
 
     static int part2(){
-        ArrayList<String> data = new Data().getData();
+        ArrayList<String> data = new Data().getData("day1");
         int total = 0;
         for(String str : data) {
             String stripped = str.replaceAll("one", "o1ne").replaceAll("two", "t2wo")
